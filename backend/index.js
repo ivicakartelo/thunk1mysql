@@ -52,6 +52,7 @@ app.put('/posts/:id', (req, res) => {
         if (error) {
             return res.status(500).json({ error });
         }
+        console.log(results); // Log the results to the console
         res.status(200).json({ id, title, content });
     });
 });

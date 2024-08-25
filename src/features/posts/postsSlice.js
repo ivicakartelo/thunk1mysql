@@ -18,7 +18,7 @@ export const addNewPost = createAsyncThunk('posts/addNewPost', async (initialPos
 });
 
 export const handleDelete = createAsyncThunk('posts/handleDelete', async (id) => {
-  const response = await axios.delete(`http://localhost:5000/posts/${id}`);
+  await axios.delete(`http://localhost:5000/posts/${id}`);
   return { id };
 }); 
 export const updatePost = createAsyncThunk('posts/updatePost', async ({ id, title, content }) => {
